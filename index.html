@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>电商平台数据可视化大屏监控</title>
+  <script src="../js/less.min.js"></script>
+  <link href="../css/index.css" rel="stylesheet">
+  <!-- 引入字体图标的 css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="../js/axios.min.js"></script>
+  <script src="../js/echarts6.min.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="top">
+      <!-- Logo -->
+      <a href="#" target="blank">
+        <i class="fa fa-bar-chart " title="site logo"></i>
+      </a>
+      <!-- 网页标题 -->
+      <span class="pagetitle">电商平台数据可视化大屏监控</span>
+      <!-- 要用哪个字体图标  就写哪个图标的类 -->
+      <i class="fa fa-gear" title="切换主题"></i>
+    </div>
+    <div class="bottom">
+      <div class="bl">
+        <!-- 拿到数据，渲染图表 -->
+        <div class="bl_1">
+          <a href="index_line.html" title="大图">
+            <i id="index_line" class="fa fa-expand"></i>
+          </a>
+          <select id="itemchoice"></select>
+          <div class="linegraph"></div>
+        </div>
+        <div class="bl_2"></div>
+      </div>
+      <div class="bm"></div>
+      <div class="br"></div>
+    </div>
+  </div>
+</body>
+<script src="../js/index.js"></script>
+
+</html>
