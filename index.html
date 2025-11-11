@@ -14,7 +14,18 @@
 
         body {
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            background-image: url('1.jpg');
+            /* 使用当前目录下的1.png作为背景 */
+            background-size: cover;
+            /* 图片覆盖整个视口 */
+            background-position: center;
+            /* 图片居中 */
+            background-repeat: no-repeat;
+            /* 不重复 */
+            background-attachment: fixed;
+            /* 背景固定，不随滚动移动 */
+            background-color: #f5f7fa;
+            /* 图片加载失败时的备用背景色 */
             min-height: 100vh;
             display: flex;
             justify-content: center;
