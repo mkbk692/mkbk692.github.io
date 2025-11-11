@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,12 +85,12 @@
             transition: all 0.3s ease;
             outline: none;
             color: #2c3e50;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
         }
 
         .password-input:focus {
             border-color: rgba(52, 152, 219, 0.6);
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15), inset 0 2px 4px rgba(0,0,0,0.03);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.03);
             background: rgba(255, 255, 255, 0.95);
         }
 
@@ -268,7 +268,7 @@
             .content-page {
                 padding: 30px 20px;
             }
-            
+
             .content-title {
                 font-size: 24px;
             }
@@ -279,23 +279,19 @@
         }
     </style>
 </head>
+
 <body>
     <!-- 页面1：密码验证 -->
     <div id="page1" class="login-container">
         <h1 class="login-title">请输入密码</h1>
-        
+
         <div class="input-group">
             <label class="input-label" for="password">密码</label>
             <div class="input-wrapper">
-                <input 
-                    type="password" 
-                    id="password" 
-                    class="password-input" 
-                    placeholder="请输入密码"
-                    autocomplete="off"
-                >
+                <input type="password" id="password" class="password-input" placeholder="请输入密码" autocomplete="off">
                 <button type="button" class="toggle-password" id="togglePassword">
-                    <svg id="eyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg id="eyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                     </svg>
@@ -304,7 +300,7 @@
         </div>
 
         <button class="submit-btn" onclick="validatePassword()">确认</button>
-        
+
         <div id="errorMsg" class="error-message">密码错误，请重试！</div>
     </div>
 
@@ -313,18 +309,18 @@
         <div class="content-header">
             <h1 class="content-title">欢迎访问</h1>
         </div>
-        
+
         <div class="content-body">
-           <p>1. 简述心脏传导系统的组成及其功能。</p >
-<p>2. 列举三种常见的呼吸系统疾病，并描述其主要症状。</p >
-<p>3. 解释什么是血压，并描述正常血压的范围。</p >
-<p>4. 描述糖尿病的典型症状及其主要治疗方法。</p >
-<p>5. 什么是抗原和抗体？它们在免疫反应中起什么作用？</p >
-<p>6. 简述肾脏的主要功能及其在人体中的作用。</p >
-<p>7. 描述神经元的结构及其功能。</p >
-<p>8. 什么是DNA复制？简述其过程和意义。</p >
-<p>9. 列举三种常见的抗生素，并描述其作用机制。</p >
-<p>10. 解释什么是基因突变，并描述其对生物体的影响。</p >
+            <p>1. 简述心脏传导系统的组成及其功能。</p>
+            <p>2. 列举三种常见的呼吸系统疾病，并描述其主要症状。</p>
+            <p>3. 解释什么是血压，并描述正常血压的范围。</p>
+            <p>4. 描述糖尿病的典型症状及其主要治疗方法。</p>
+            <p>5. 什么是抗原和抗体？它们在免疫反应中起什么作用？</p>
+            <p>6. 简述肾脏的主要功能及其在人体中的作用。</p>
+            <p>7. 描述神经元的结构及其功能。</p>
+            <p>8. 什么是DNA复制？简述其过程和意义。</p>
+            <p>9. 列举三种常见的抗生素，并描述其作用机制。</p>
+            <p>10. 解释什么是基因突变，并描述其对生物体的影响。</p>
         </div>
 
         <button class="logout-btn" onclick="logout()">返回登录</button>
@@ -335,12 +331,12 @@
         const CORRECT_PASSWORD = '123456';
 
         // 切换密码可见性
-        document.getElementById('togglePassword').addEventListener('click', function() {
+        document.getElementById('togglePassword').addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
             const eyeIcon = document.getElementById('eyeIcon');
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
-            
+
             // 切换图标
             if (type === 'password') {
                 eyeIcon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
@@ -353,7 +349,7 @@
         function validatePassword() {
             const input = document.getElementById('password').value;
             const errorMsg = document.getElementById('errorMsg');
-            
+
             // 验证密码
             if (input === CORRECT_PASSWORD) {
                 // 验证成功，切换到页面2
@@ -361,14 +357,14 @@
                 document.getElementById('page2').style.display = 'block';
                 document.body.style.alignItems = 'flex-start';
                 document.body.style.paddingTop = '50px';
-                
+
                 // 清空密码输入框
                 document.getElementById('password').value = '';
                 errorMsg.classList.remove('show');
             } else {
                 // 验证失败，显示错误信息
                 errorMsg.classList.add('show');
-                
+
                 // 3秒后隐藏错误信息
                 setTimeout(() => {
                     errorMsg.classList.remove('show');
@@ -377,7 +373,7 @@
         }
 
         // 回车键提交
-        document.getElementById('password').addEventListener('keypress', function(e) {
+        document.getElementById('password').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 validatePassword();
             }
@@ -392,6 +388,5 @@
         }
     </script>
 </body>
+
 </html>
-
-
